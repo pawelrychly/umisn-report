@@ -4,6 +4,7 @@
 \usepackage[OT4]{fontenc} 
 \usepackage{graphicx,color} 
 \usepackage{url}
+\usepackage{float}
 \usepackage[pdftex,hyperfootnotes=false,pdfborder={0 0 0}]{hyperref} %za wszystkimi pakietami; pdfborder nie wszedzie tak samo zaimplementowane bo specyfikacja nieprecyzyjna; pod miktex'em po prostu nie widac wtedy ramek
 
 \input{_ustawienia.tex}
@@ -16,8 +17,62 @@
 \begin{document}
 
 \input{_tytulowa}
+\section{Uczenie nadzorowane sztucznych sieci neuronowych}
 
-\section{Wstęp}
+\paragraph{Zadanie 2. Różnice funkcjonalne pomiędzy sieciami jedno- i wielowarstwowymi oraz pomiędzy sieciami liniowymi a nieliniowymi (uczenie sieci warstwowych funkcji logicznej AND i funkcji różnicy symetrycznej XOR)}
+
+\subparagraph{1. Skonstruuj zbiór przykładów definiujący dwuargumentową funkcję ("bramkę") AND (File|New|Data set) i zachowaj go. Wszystkie 4 przykłady mają stanowić zbiór uczący. Jakie są klasy decyzyjne w tym zbiorze przykładów i jakie są ich liczności?\\}
+
+Zbiór zawiera dwie klasy decyzyjne: 1 i 0. Ich liczności wynoszą odpowiednio: 1 i 3. 
+
+\begin{table}[h]
+    \begin{tabular}{|c|c|c|}
+     \hline
+     	VAR1 & VAR2 & decyzja \\ \hline
+        0 & 0 & 0 \\ 
+        0 & 1 & 0 \\ 
+		1 & 0 & 0 \\ 
+		1 & 1 & 1 \\ \hline             
+    \end{tabular}
+    \caption{Zbiór przykładów uczących}
+\end{table} 
+
+\subparagraph{3. Wyobraź sobie (narysuj) pożądaną funkcję odpowiedzi sieci (trójwymiarowy wykres zależności wyjścia od dwóch wejść)\\}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{pozodana_funnkcja_odpowiedzi_and.pdf}
+\end{center}
+\caption{Pożądana funkcja odpowiedzi sieci}
+\label{fig-1Tdelta}
+\end{figure}
+
+\subparagraph{4. Skonstruuj liniową sieć jednowarstwową o architekturze 2-1 (File|New|Network, Type=Linear, przycisk Advise). Uaktywnij okno wykresu błędu średniokwadratowego (Statistics|Training graph). Naucz sieć na problemie AND (Train|Multilayer perceptron|Back propagation). Obejrzyj funkcję odpowiedzi sieci (Run|Responce surface) i błędy dla poszczególnych przypadków (Statistics|Case errors)\\}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{And-training-3D.png}
+\end{center}
+\caption{Funkcja odpowiedzi sieci}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{And-training-Error.png}
+\end{center}
+\caption{Wykres błędu}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{And-training-CaseError.png}
+\end{center}
+\caption{Błędy dla poszczególnych przypadków}
+\label{fig-1Tdelta}
+\end{figure}
+
 
 \end{document}
 
