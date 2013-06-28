@@ -1,0 +1,15 @@
+Zad2 ------------AND------------
+Linear:
+Epochs 100
+Learning rate 0.1	0.1
+Momentum	0.2	0.2
+Noise	0.025
+
+     -------
+
+Logistic
+Epochs 100
+Learning rate 0.1	0.1
+Momentum	0.2	0.2
+Noise	0.025
+--------------------------------
