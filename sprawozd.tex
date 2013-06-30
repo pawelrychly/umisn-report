@@ -250,7 +250,38 @@ Neuron wyjściowy agreguje informacje pochodzące z neuronów ukrytych. Wagi neu
 
 W trakcie uczenia sieci, wartości bezwzględne wag systematycznie rosną. Może to doprowadzić do przekroczenia zakresu liczb.
 
+\paragraph{Zadanie 3. Obserwacja zjawiska przeuczenia na przykładzie zbioru PIMA}
+\subparagraph{2. Wczytaj zbiór PIMA i skonstruuj dla niego dwuwarstwową sieć nieliniową o architekturze 8-4-1.\\}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{8-4-1-zad3.png}
+\end{center}
+\caption{Dwuwarstwowa sieć neuronowa o architekturze 8-4-1.}
+\label{fig-1Tdelta}
+\end{figure}
 
+
+\subparagraph{3. Obejrzyj ustawienia w okienku Pre/Post Processing.\\}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{8-4-1-zad3-pre-post-processing.png}
+\end{center}
+\caption{Okno Pre/Post Processing}
+\label{fig-1Tdelta}
+\end{figure}
+
+
+\subparagraph{5. Przeprowadź uczenie algorytmem wstecznej propagacji błędu (może być bardzo długie, np. 20 000 epok); obserwuj przebieg błędu dla zbioru uczącego i weryfikującego.\\}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{8-4-1-zad3-przeuczenie.png}
+\end{center}
+\caption{Przebieg błędu dla zbioru uczącego i weryfikującego}
+\label{fig-1Tdelta}
+\end{figure}
+Jak można zauważyć na powyższym wykresie, po około 5000 epok błąd średniokwadratowy dla zbioru weryfikującego zaczął rosnąć. Spowodowane jest to efektem przeuczenia.  
 
 \end{document}
 
