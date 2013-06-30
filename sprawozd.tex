@@ -102,5 +102,155 @@ Program Statistica uniemożliwia utworzenie takiej sieci.
 \label{fig-1Tdelta}
 \end{figure}
 
+\subparagraph{7. Wejdź do edytora sieci (Network|Edit) i przypatrz się wagom neuronu wyjściowego. Wykreśl w przestrzeni wejść prostą, którą definiuje neuron wyjściowy i oceń, czy i jak realizuje ona separację klas decyzyjnych. \\}
+wagi: \\
+w0 = 0.2847 \\
+w1 = 0.5152 \\
+w2 = 0.4980 \\
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{and-prosta-wagi.pdf}
+\end{center}
+\caption{Prosta w przestrzeni wejść definiująca neuron wyjściowy}
+\label{fig-1Tdelta}
+\end{figure}
+
+Prosta dokonuje niepoprawnej separacji klas decyzyjnych. Zgodnie z narysowaną prostą przypadki 0, 1 oraz 1, 0 należałyby do klasy 1.
+
+
+\subparagraph{8. Skonstruuj zbiór przykładów definiujący dwuargumentową funkcję XOR i zachowaj go. Wszystkie 4 przykłady mają stanowić zbiór uczący. \\}
+
+\begin{table}[h]
+    \begin{tabular}{|c|c|c|}
+     \hline
+     	VAR1 & VAR2 & decyzja \\ \hline
+        0 & 0 & 0 \\ 
+        0 & 1 & 1 \\ 
+		1 & 0 & 1 \\ 
+		1 & 1 & 0 \\ \hline             
+    \end{tabular}
+    \caption{Zbiór przykładów uczących}
+\end{table} 
+
+
+
+\subparagraph{9. Wyobraź sobie (narysuj) pożądaną funkcję odpowiedzi sieci.\\}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{pozodana_funnkcja_odpowiedzi_xor.pdf}
+\end{center}
+\caption{Pożądana funkcja odpowiedzi sieci}
+\label{fig-1Tdelta}
+\end{figure}
+
+\subparagraph{10. Skonstruuj liniową sieć jednowarstwową o architekturze 2-1 i naucz ją na problemie XOR. Obejrzyj funkcję odpowiedzi sieci i błędy dla poszczególnych przypadków.\\}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Xor-training-3D.png}
+\end{center}
+\caption{Funkcja odpowiedzi sieci}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Xor-training-Error.png}
+\end{center}
+\caption{Wykres błędu}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Xor-training-CaseError.png}
+\end{center}
+\caption{Błędy dla poszczególnych przypadków}
+\label{fig-1Tdelta}
+\end{figure}
+ 
+\subparagraph{11. Przerób sieć na nieliniową sieć jednowarstwową i naucz ją na tym samym problemie (zwróć uwagę, jak sieć stara się minimalizować błąd). Obejrzyj, jak zmienia się rozkład wag podczas procesu uczenia (Statistics|Weight distribution).\\}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Xor-training-3D-logistic.png}
+\end{center}
+\caption{Funkcja odpowiedzi sieci}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Xor-training-Error-logistic.png}
+\end{center}
+\caption{Wykres błędu}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Xor-training-CaseError-logistic.png}
+\end{center}
+\caption{Błędy dla poszczególnych przypadków}
+\label{fig-1Tdelta}
+\end{figure}
+
+W trakcie procesu uczenia wartości wag zbiegały się do siebie. 
+
+\subparagraph{12. Skonstruuj nieliniową sieć dwuwarstwową o architekturze 2-2-1 (File|New|Network, Type=Multilayer perceptron) i naucz ją na problemie XOR. Obejrzyj funkcję odpowiedzi.\\}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Xor-multi-training-3D.png}
+\end{center}
+\caption{Funkcja odpowiedzi sieci}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Xor-multi-training-Error.png}
+\end{center}
+\caption{Wykres błędu}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Xor-multi-training-CaseError.png}
+\end{center}
+\caption{Błędy dla poszczególnych przypadków}
+\label{fig-1Tdelta}
+\end{figure}
+
+\subparagraph{13. Obejrzyj wagi sieci w edytorze sieci (Edit|Network). Jakie proste definiują neurony w warstwie ukrytej (spróbuj je narysować w przestrzeni wejść) ? Jak można interpretować działanie neuronu wyjściowego ?\\}
+\begin{table}[h]
+    \begin{tabular}{|c|c|c|}
+     \hline
+        0 & h1\#01 &	h1\#02 \\ \hline 
+        Th & -3.132	& 2.722 \\ 
+		a1 & -6.088	& -5.279 \\ 
+		a2 & 6.116 & 5.042 \\ \hline             
+    \end{tabular}
+    \caption{Wagi neuronów w warstwie ukrytej}
+\end{table} 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{xor-multi-prosta-wagi.pdf}
+\end{center}
+\caption{Proste wyznaczone przez neurony warstwy ukrytej}
+\label{fig-1Tdelta}
+\end{figure}
+Neuron wyjściowy agreguje informacje pochodzące z neuronów ukrytych. Wagi neuronów warstw ukrytych definiują płaszczyzny w przestrzeni wejść. Neuron wyjściowy dokonuje klasyfikacji, w oparciu o te płaszczyzny.   
+
+\subparagraph{14. Obejrzyj, jak zmienia się rozkład wag podczas procesu uczenia. Jaka jest przyczyna takiego zachowania wag i jakie to może mieć konsekwencje (z "informatycznego" punktu widzenia) ?\\}
+
+W trakcie uczenia sieci, wartości bezwzględne wag systematycznie rosną. Może to doprowadzić do przekroczenia zakresu liczb.
+
+
+
 \end{document}
 
