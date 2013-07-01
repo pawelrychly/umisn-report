@@ -283,5 +283,19 @@ W trakcie uczenia sieci, wartości bezwzględne wag systematycznie rosną. Może
 \end{figure}
 Jak można zauważyć na powyższym wykresie, po około 5000 epok błąd średniokwadratowy dla zbioru weryfikującego zaczął rosnąć. Spowodowane jest to efektem przeuczenia.  
 
+\paragraph{Zadanie 4. Dobór liczby neuronów w warstwie ukrytej na przykładzie zbioru IRIS.}
+\subparagraph{3. Czy istnieje jednoznaczna zależność pomiędzy n a przebiegiem błędu średniokwadratowego? Czy biorąc pod uwagę tylko przebeg błędu dla zbioru uczącego można ustalić optymalną liczbę neuronów w warstwie ukrytej? Jeśli tak, to ile ona wynosi dla tego zbioru przykładów?}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{zad_4_blad_n.pdf}
+\end{center}
+\caption{Przebieg błędu uczenia w zależności od liczby neuronów w warstwie ukrytej}
+\label{fig-1Tdelta}
+\end{figure}
+
+Jak można zauważyć na powyższym wykresie, większa liczba neuronów w warstwie ukrytej spowodowała, że błąd w początkowych epokach uczenia spadał szybciej. Różnica ta malała jednak w kolejnych etapach. Nie można ustalić optymalnej liczby neuronów w warstwie ukrytej. 
+
+
 \end{document}
 

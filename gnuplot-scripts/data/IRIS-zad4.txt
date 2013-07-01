@@ -1,0 +1,5 @@
+epochs 1000
+learning rate 0.2 
+momentum 0.3
+noise 0
+4,2,3
