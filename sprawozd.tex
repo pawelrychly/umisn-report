@@ -341,5 +341,41 @@ w funkcji progu Accept}
 
 Tak. Wartość ta zależy jednak od tego jak `kosztowne' jest dokonanie błędnej klasyfikacji. Zakładając, że w analizowanym problemie koszt takiej pomyłki jest niewielki, sugerowanymi wartościami progów Accept i Reject są odpowiednio: 0.5 i 0.5.
 
+\paragraph{Zadanie 8. Badanie odporności sieci na uszkodzenia.}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{zad_8.pdf}
+\end{center}
+\caption{Trafność klasyfikacji w zależności od liczby usuniętych wag.}
+\label{fig-1Tdelta}
+\end{figure}
+
+\subparagraph{5. Czy odporność sieci na uszkodzenia (usunięcia wag) jest wysoka?}
+Tak. Jak można zauważyć na wykresie, pomimo usunięcia wag, trafność klasyfikacji pozostała wysoka.
+\subparagraph{6. Czy jesteś w stanie na podstawie tak “zredukowanej” sieci powiedzieć coś o ważności poszczególnych atrybutów opisujących przykłady?}
+Pomimo tego, że wagi dwóch pierwszych atrybutów zostały prawie całkowicie wyzerowane, trafność klasyfikowania pozostała wysoka. Wydaje się, że ważność przytoczonych atrybutów jest niewielka. 
+
+
+\subparagraph{7. Czy w konsekwencji “przerzedzenia” sieci można usunąć niektóre neurony? Jak należy to zrobić? (przemyśl dokładnie)}
+Można usunąć tylko takie neurony, których zarówno wszystkie wagi wejściowe, jak i wyjściowe są wyzerowane. 
+
+\paragraph{Zadanie 9. Eksperymentalny dobór rozmiaru zbioru weryfikującego}
+Eksperyment przeprowadzono na zbiorze IRIS (150 przykładów) oraz sieci neuronowej o architekturze 4-3-3.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{zad9.pdf}
+\end{center}
+\caption{Trafność klasyfikowania, błąd klasyfikowania i procent przykładów niezaklasyfikowanych w funkcji proporcji rozmiaru zbioru weryfikującego do liczby przykładów uczących}
+\label{fig-1Tdelta}
+\end{figure}
+
+Jak można zauważyć na wykresie, jakość klasyfikacji jest tym lepsza im większy jest stosunek wielkości zbioru treningowego do zbioru weryfikującego. 
+
+\paragraph{Zadanie 10. Porównanie ‘vanilla’ backpropagation z bardziej wyrafinowanymi algorytmami uczenia nadzorowanego sieci warstwowych}
+
+
+
 \end{document}
 
