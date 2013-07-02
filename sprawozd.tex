@@ -296,6 +296,50 @@ Jak można zauważyć na powyższym wykresie, po około 5000 epok błąd średni
 
 Jak można zauważyć na powyższym wykresie, większa liczba neuronów w warstwie ukrytej spowodowała, że błąd w początkowych epokach uczenia spadał szybciej. Różnica ta malała jednak w kolejnych etapach. Nie można ustalić optymalnej liczby neuronów w warstwie ukrytej. 
 
+\paragraph{Zadanie 7. Dobór liczby neuronów w warstwie ukrytej na przykładzie zbioru IRIS.}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{zad7matrix.png}
+\end{center}
+\caption{Przebieg błędu uczenia w zależności od liczby neuronów w warstwie ukrytej}
+\label{fig-1Tdelta}
+\end{figure}
+
+\subparagraph{2. Przeprowadź klasyfikowanie przykładów ze zbioru testującego (okno Statistics|Classification). Znajdź w tym oknie macierz pomyłek (ang. confusion matrix)}
+
+\subparagraph{4. Przy użyciu gnuplota sporządź wykres (trzy przebiegi na jednym wykresie) zależności procentu przypadków z jednego ze zbiorów (uczącego / weryfikującego / testującego):
+– poprawnie zaklasyfikowanych (do wszystkich klas decyzyjnych razem),
+– niepoprawnie zaklasyfikowanych,
+– niezaklasyfikowanych
+w funkcji progu Accept}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{zad_7_trening.pdf}
+\end{center}
+\caption{Część przypadków zaklasyfikowanych poprawnie, błędnie i niezaklasyfikowanych w zależności od progu akceptacji, dla zbioru treningowego. }
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{zad_7_test.pdf}
+\end{center}
+\caption{Część przypadków zaklasyfikowanych poprawnie, błędnie i niezaklasyfikowanych w zależności od progu akceptacji, dla zbioru testowego.}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{zad_7_ver.pdf}
+\end{center}
+\caption{Część przypadków zaklasyfikowanych poprawnie, błędnie i niezaklasyfikowanych w zależności od progu akceptacji, dla zbioru weryfikującego.}
+\label{fig-1Tdelta}
+\end{figure}
+
+\subparagraph{5. Czy na podstawie otrzymanego wykresu można zasugerować jakąś optymalną wartość obu progów dla tego zbioru przykładów i tej sieci?}
+
+Tak. Wartość ta zależy jednak od tego jak `kosztowne' jest dokonanie błędnej klasyfikacji. Zakładając, że w analizowanym problemie koszt takiej pomyłki jest niewielki, sugerowanymi wartościami progów Accept i Reject są odpowiednio: 0.5 i 0.5.
 
 \end{document}
 
