@@ -375,7 +375,26 @@ Jak można zauważyć na wykresie, jakość klasyfikacji jest tym lepsza im wię
 
 \paragraph{Zadanie 10. Porównanie ‘vanilla’ backpropagation z bardziej wyrafinowanymi algorytmami uczenia nadzorowanego sieci warstwowych}
 
-Eksperyment przeprowadzono na zbiorze BUPA na sieci neuronowej o architekturze 6-6-1
+Eksperyment przeprowadzono na zbiorze BUPA na sieci neuronowej o architekturze 6-6-1. Zbadano działanie algorytmów: vanilla backpropagation, QuickProp oraz DeltaBarDelta. Dla każdego z nich, sieć uczona była aż do osiągnięcia warunku stopu, którym było osiągnięcie wielkości błędu średniokwadratowego mniejszej lub równej 0.44. Dla każdego algorytmu, naukę sieci przeprowadzono pięciokrotnie, a uzyskane wyniki uśredniono. 
+Na wykresach przedstawiono liczbę epok, jaka upłynęła aż do osiągnięcia warunku stopu oraz uśrednioną trafność klasyfikacji dla każdego algorytmu. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{zad10-epoki.pdf}
+\end{center}
+\caption{Liczba epok, potrzebnych do osiągnięcia warunku stopu w zależności od wykorzystanego algorytmu}
+\label{fig-1Tdelta}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=1\textwidth]{zad10-trafnosc.pdf}
+\end{center}
+\caption{Średnia trafność klasyfikacji w zależności od wykorzystanego algorytmu}
+\label{fig-1Tdelta}
+\end{figure}
+
+Jak można zauważyć, algorytm Quick Prop osiągnął warunek stopu w najkrótszym czasie. Ponadto trafność klasyfikacji przeprowadzona na sieci nauczonej tym algorytmem również była najlepsza. 
 
 \end{document}
 
